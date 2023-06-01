@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">esg-adventure</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_password">Senha</string>
+    <string name="txt_button_signin">Entrar</string>
+    <string name="txt_register">Não tem conta? Cadastre-se!</string>
+    <string name="telaprincipaltxt">Você joga enquanto ajuda o planeta! É só ganho!</string>
+    <string name="startbutton">Começar</string>
+    <string name="play_button">Jogar</string>
+</resources>
