@@ -1,17 +1,23 @@
 package com.example.esg_adventure
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.esg_adventure.Adapter.AdapterCard
+import com.example.esg_adventure.databinding.ActivityCarouselCardsBinding
+import com.example.esg_adventure.databinding.ActivityFruitDetailsBinding
 import com.example.esg_adventure.model.Card
 
 class CarouselCards : AppCompatActivity() {
 
+    private lateinit var binding: ActivityCarouselCardsBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityCarouselCardsBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_carousel_cards)
+        setContentView(binding.root)
 
         val recyclerView_cards = findViewById<RecyclerView>(R.id.recyclerViewCards)
         recyclerView_cards.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
@@ -34,5 +40,15 @@ class CarouselCards : AppCompatActivity() {
         listaCartas.add(cartaTres)
         listaCartas.add(cartaQuatro)
         listaCartas.add(cartaCinco)
+
+        binding.btJogar.setOnClickListener {
+            jogar()
+        }
+    }
+
+    private fun jogar() {
+        val intent = Intent(this, FruitDetails::class.java)
+        startActivity(intent)
+        finish()
     }
 }

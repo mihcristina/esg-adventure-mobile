@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitFactory {
 
-    val URL: String = "https://www.fruityvice.com/api/"
+    val URL: String = "https://www.fruityvice.com/api/fruit/watermelon"
 
     val retrofitFactory = Retrofit.Builder()
         .baseUrl(URL)
